@@ -1,0 +1,45 @@
+{
+    "name": "Whatsapp-Botz",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@adiwajshing/keyed-db": "^0.2.4",
+        "@bochilteam/scraper": "latest",
+        "@hapi/boom": "^9.1.4", 
+        "axios": "^0.27.2",
+        "baileys": "latest",
+        "chalk": "^4.1.2",
+        "child_process": "^1.0.2",
+        "fluent-ffmpeg": "^2.1.2",
+        "fs": "0.0.1-security",
+        "i18n": "^0.15.1",
+        "i-downloader": "latest",
+        "jimp": "^0.16.1",
+        "json-stable-stringify": "latest",
+        "module-alias": "latest",
+        "moment-timezone": "^0.5.34",
+        "node-webpmux": "^3.1.0",
+        "pino": "^8.1.0",
+        "parse-ms": "^2.1.0",
+        "qrcode": "^1.5.1",
+        "spotifydl-core": "latest",
+        "youtubei": "^0.0.1-rc.36"
+    },
+    "_moduleAliases": {
+        "@libs": "system/libs",
+        "@config": "system/config/config.js",
+        "@commands": "system/commands",
+        "@message": "system/message"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

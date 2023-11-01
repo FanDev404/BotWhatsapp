@@ -1,0 +1,51 @@
+{
+  "ownerNumber": "6285156389462",
+  "ownerName": "Nun",
+  "botName": "Nun-Bot",
+  "githubName": "cangka22",
+  "githubRepo": "file",
+  "githubTokenClassic": "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",
+  "openAiKey": "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",
+  "removebgKey": "8QsU9hiTTyg29adB6SLid3CS",
+  "audioToTextKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNTg3ZWRhYzQtMTU5Mi00ZDUyLTg2YzgtNjYyMjk5ODE4MGI4IiwidHlwZSI6ImFwaV90b2tlbiJ9.a___18fAv2z-JqIZEcn4XLFRZF_gm1xhOyl6uDB2CqQ",
+  "vipSewa": [
+    "120363161769315461@g.us"
+  ],
+  "linkGroup": "https://chat.whatsapp.com/DGsLvU2b2IKGsukJJVCaXc",
+  "logonya": {
+    "url": "https://telegra.ph/file/2dbcd07a7d315dbafc78c.jpg",
+    "isLogo": true
+  },
+  "thumbnailDok": {
+    "url": "https://raw.githubusercontent.com/Aztecs444/media/Zeck/image/thumbnaildokumen.jpg"
+  },
+  "thumbnailVid": {
+    "url": "https://raw.githubusercontent.com/Aztecs444/media/Zeck/video/video.mp4"
+  },
+  "localBackup": 1800000,
+  "limitAwal": 30,
+  "6285727148825@s.whatsapp.net": {
+    "ownerNumber": "6285156389462",
+    "ownerName": "Nun",
+    "botName": "Nun-Bot",
+    "setmenu": "image",
+    "setprefix": "all",
+    "replytype": "mess3",
+    "mode": "public",
+    "auto": "available",
+    "autoblockcmd": false,
+    "autoreport": true,
+    "autobio": false,
+    "autosticker": false,
+    "autorespon": false,
+    "autoread": true,
+    "autovn": false,
+    "autolevel": false,
+    "autojoin": false,
+    "autobackup": true,
+    "anticall": true,
+    "antispam": false,
+    "local_read": [],
+    "local_unread": []
+  }
+}
