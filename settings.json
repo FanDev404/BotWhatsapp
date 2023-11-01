@@ -1,0 +1,40 @@
+{
+  "antiCall": false,
+  "antiSpam": false,
+  "autoBlockCmd": false,
+  "autoLevel": false,
+  "autoReport": true,
+  "autoRead": true,
+  "limitAwal": 50,
+  "mode": "public",
+  "ownerNumber": "6289674310267",
+  "replyType": "mess3",
+  "setPrefix": "all",
+  "local_github": {
+    "name": "FanDev404", 
+    "repository": "file", 
+    "token": ""
+  }, 
+  "local_backup": {
+    "status": true, 
+    "time": "20 minutes"
+  }, 
+  "local_restart": {
+    "status": true, 
+    "time": "1 hours"
+  }, 
+  "local_key": {
+    "open_ai": "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", 
+    "remove_background": "8QsU9hiTTyg29adB6SLid3CS"
+  }, 
+  "local_session": {
+    "status_scan": false, 
+    "phone": "6285733558610"
+  },
+  "vipSewa": [
+    "120363161769315461@g.us",
+    "120363194541118564@g.us", 
+    "120363145101924132@g.us", 
+    "120363168969048224@g.us"
+  ]
+}

@@ -1,0 +1,50 @@
+import { calender, time, randomCode } from "../../libs/function.js"
+export default {
+    commands: ["addsewa"],
+    tags: "storage menu",
+    isSewa: true,
+    isOwner: true,
+    callback: async ({ mywa, m, command, cmdSuccess, cmdFailed }) => {
+        try {
+            if (m.text.includes("https://chat.whatsapp.com/")) {
+                if (m.text.split(".com/")[1] == "") return m.reply("Error link")
+                var gorupID = await mywa.acceptInvite(m.text.split(".com/")[1].split("#")[0].split(" ").filter((x) => x !== "")[0]) 
+                var expired = (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("second") || m.text.toLowerCase().includes("detik")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}second`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("minute") || m.text.toLowerCase().includes("menit")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}minute`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("hour") || m.text.toLowerCase().includes("jam")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}hour`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("day") || m.text.toLowerCase().includes("hari")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}day`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("week") || m.text.toLowerCase().includes("minggu")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}week`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("month") || m.text.toLowerCase().includes("bulan")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}month`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("year") || m.text.toLowerCase().includes("tahun")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}year`)) : "PERMANEN"
+            } else if (m.quoted && m.quoted.body.includes("https://chat.whatsapp.com/")) {
+                if (m.quoted.body.split(".com/")[1] == "") return m.reply("Error link")
+                var gorupID = await mywa.acceptInvite(m.quoted.body.split(".com/")[1].split("#")[0].split(" ").filter((x) => x !== "")[0])
+                var expired = (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("second") || m.text.toLowerCase().includes("detik")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}second`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("minute") || m.text.toLowerCase().includes("menit")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}minute`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("hour") || m.text.toLowerCase().includes("jam")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}hour`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("day") || m.text.toLowerCase().includes("hari")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}day`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("week") || m.text.toLowerCase().includes("minggu")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}week`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("month") || m.text.toLowerCase().includes("bulan")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}month`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("year") || m.text.toLowerCase().includes("tahun")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}year`)) : "PERMANEN"
+            } else if (m.isNumber(parseFloat(m.text)) && m.text.includes("@g.us")) {
+                var gorupID = m.text.split("#")[0].split(" ").filter((x) => x !== "")[0]
+                var expired = (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("second") || m.text.toLowerCase().includes("detik")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}second`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("minute") || m.text.toLowerCase().includes("menit")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}minute`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("hour") || m.text.toLowerCase().includes("jam")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}hour`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("day") || m.text.toLowerCase().includes("hari")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}day`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("week") || m.text.toLowerCase().includes("minggu")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}week`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("month") || m.text.toLowerCase().includes("bulan")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}month`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("year") || m.text.toLowerCase().includes("tahun")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}year`)) : "PERMANEN"
+            } else if (m.isGroup) {
+                var gorupID = m.chat
+                var expired = (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("second") || m.text.toLowerCase().includes("detik")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}second`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("minute") || m.text.toLowerCase().includes("menit")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}minute`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("hour") || m.text.toLowerCase().includes("jam")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}hour`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("day") || m.text.toLowerCase().includes("hari")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}day`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("week") || m.text.toLowerCase().includes("minggu")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}week`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("month") || m.text.toLowerCase().includes("bulan")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}month`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("year") || m.text.toLowerCase().includes("tahun")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}year`)) : "PERMANEN"
+            } else {
+                var gorupID = "code"
+                var expired = (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("second") || m.text.toLowerCase().includes("detik")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}second`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("minute") || m.text.toLowerCase().includes("menit")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}minute`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("hour") || m.text.toLowerCase().includes("jam")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}hour`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("day") || m.text.toLowerCase().includes("hari")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}day`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("week") || m.text.toLowerCase().includes("minggu")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}week`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("month") || m.text.toLowerCase().includes("bulan")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}month`)) : (m.isNumber(parseFloat(m.text.split("#")[1])) && (m.text.toLowerCase().includes("year") || m.text.toLowerCase().includes("tahun")))? (Date.now() + time(`${parseFloat(m.text.split("#")[1])}year`)) : "PERMANEN"
+            }
+            if (gorupID == "code") {
+                const code = randomCode() 
+                db.code[code] = { "expired": m.isNumber(expired)? m.text.split("#")[1] : "PERMANEN" }
+                m.reply(code)
+                cmdSuccess(command, "storage menu")
+            } else {
+                if (db.settings.vipSewa.includes(gorupID)) return m.reply("Sudah sewa permanet kak") 
+                if (Object.keys(db.sewa).includes(gorupID) && db.sewa[gorupID].expired == "PERMANEN") {
+                    return m.reply("Sudah sewa permanet kak")
+                }
+                if (Object.keys(db.sewa).includes(gorupID) && m.isNumber(expired)) db.sewa[gorupID].expired += expired
+                if (Object.keys(db.sewa).includes(gorupID) && expired == "PERMANEN") db.sewa[gorupID].expired = expired
+                if (!Object.keys(db.sewa).includes(gorupID)) db.sewa[gorupID] = { "date": calender(), "expired": expired }
+                if (Object.keys(db.groups).includes(gorupID) && db.groups[gorupID].sewa.status) db.groups[gorupID].sewa = { status: false, date: calender(), expired: 0 }
+                const groupMetadata = (await mywa.groupMetadata(gorupID).catch(e => {})) || {}
+                const groupName = Object.keys(groupMetadata).length > 0? groupMetadata?.subject : ""
+                m.reply(`Success add sewa ${m.isNumber(expired)? (m.text.split("#")[1] + " ") : ""} ${groupName? ("to " + groupName) : ""}`)
+                cmdSuccess(command, "storage menu")
+            }
+        } catch (error) {
+            cmdFailed(command, "storage menu", error)
+        }
+    }
+}
